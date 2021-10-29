@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  LFLSDKDemo
+
+  Created by laole918 on 2021/10/27.
+  
+*/
+"Config" = "设置";
+"fakeBundleId" = "模拟包名";
+"Save and Exit" = "保存并重启应用";
+"LFL1" = "乐福乐 View";
+"LFL2" = "乐福乐 View FullScreen";
+"LFL3" = "乐福乐 showLFLFromRootViewController";

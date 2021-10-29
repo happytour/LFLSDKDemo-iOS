@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  LFLSDKDemo
+
+  Created by laole918 on 2021/10/27.
+  
+*/
+"Config" = "Config";
+"fakeBundleId" = "fakeBundleId";
+"Save and Exit" = "Save and Exit";
+"LFL1" = "LFL View";
+"LFL2" = "LFL View FullScreen";
+"LFL3" = "LFL showLFLFromRootViewController";
