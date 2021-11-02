@@ -44,7 +44,7 @@ pod 'LYAdSDKAdapterForBD', '2.3.0'
 pod 'LYAdSDKAdapterForJD', '2.3.0'
 pod 'LYAdSDKAdapterForKLN', '2.3.2'
 
-pod 'LFLSDK', :path => './LFLSDK/1.0.5'
+pod 'LFLSDK', '1.0.6'
 target 'LFLSDKDemo' do
   project 'LFLSDKDemo/LFLSDKDemo'
 end
@@ -110,16 +110,15 @@ typedef NS_ENUM(NSInteger, LFLCustomTaskType) {
 #### 通过showLFLFromRootViewController展示
 
 ```objectivec
-    [LFLSDKManager showLFLFromRootViewController:self customTaskListener:^(LFLCustomTaskType customTask) {
+    [LFLSDKManager showLFLFromRootViewController:self customTaskListener:^(LFLView * lflView, LFLCustomTaskType customTask) {
         if (customTask == LFLCustomTaskTypeShare) {
             //调用媒体端分享逻辑
-    //        if (分享成功) {
-                [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeShare success:YES];
-    //        } else {
-    //            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeShare success:NO];
-    //        }
+        } else if (customTask == LFLCustomTaskTypeInvite) {
+            //调用媒体端邀请逻辑
+        } else if (customTask == LFLCustomTaskTypeTakePhoto) {
+            //调用媒体端拍照逻辑
         }
-    } dismissListener:^{
+    } dismissListener:^(LFLView * lflView) {
         //处理LFL关闭逻辑
     }];
 ```
@@ -147,7 +146,7 @@ typedef NS_ENUM(NSInteger, LFLCustomTaskType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     CGRect bounds = self.view.bounds;
     if (bounds.size.width > bounds.size.height) {
         CGFloat h = bounds.size.width;
