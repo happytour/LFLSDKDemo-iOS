@@ -29,7 +29,7 @@ pod 'LYAdSDKAdapterForBD', '2.3.0'
 pod 'LYAdSDKAdapterForJD', '2.3.0'
 pod 'LYAdSDKAdapterForKLN', '2.3.2'
 
-pod 'LFLSDK', '1.0.6'
+pod 'LFLSDK', '1.0.7'
 target 'LFLSDKDemo' do
   project 'LFLSDKDemo/LFLSDKDemo'
 end
