@@ -33,7 +33,7 @@ target 'LFLSDKDemo' do
   pod 'fork-QySdk', '1.3.2'
   pod 'fork-JADYun' , '1.3.4'
   pod 'fork-KlevinAdSDK', '2.3.0.222'
-  
+
   pod 'LYAdSDK', '2.3.4'
   pod 'LYAdSDKAdapterForCSJ', '2.3.4'
   pod 'LYAdSDKAdapterForGDT', '2.3.3'
@@ -98,6 +98,13 @@ if (...引入了资源包...) {
 ```objectivec
 // 例：1.0.0
 NSLog(@"sdkVersion: %@", [LFLSDKManager sdkVersion]);
+```
+
+### 资源包版本号
+
+```objectivec
+// 例：100
+NSLog(@"sdkVersion: %@", [LFLSDKManager sdkAssetsVersion]);
 ```
 
 ### 自定义任务
