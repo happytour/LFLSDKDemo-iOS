@@ -9,6 +9,6 @@
 #define LFLDemoConfig_h
 
 #define lfl_fake_bundle_id             @""
-#define lfl_app_id                     @"11037157"
+#define lfl_app_id                     @""
 
 #endif /* LFLDemoConfig_h */
