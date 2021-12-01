@@ -46,7 +46,7 @@
         NSString *appId = [defaults objectForKey:@"appId"];
 //        NSString *fakeBundleId = [defaults objectForKey:@"fakeBundleId"];
         NSString *fakeBundleId = [NSBundle mainBundle].nowBundleId ? [NSBundle mainBundle].nowBundleId : [NSBundle mainBundle].orgBundleId;
-        NSString * log = [NSString stringWithFormat:@"demo version: %@(%@)\nsdk version: %@(%d)\nappId: %@\nuserId: %@\n%@: %@", appVersion, appVersionCode, [LFLSDKManager sdkVersion], (int)LFLSDKVersionNumber, appId, userId, NSLocalizedString(@"fakeBundleId", nil), fakeBundleId];
+        NSString * log = [NSString stringWithFormat:@"demo version: %@(%@)\nsdk version: %@(%d)\nsdk assets version: %@\nappId: %@\nuserId: %@\n%@: %@", appVersion, appVersionCode, [LFLSDKManager sdkVersion], (int)LFLSDKVersionNumber, [LFLSDKManager sdkAssetsVersion], appId, userId, NSLocalizedString(@"fakeBundleId", nil), fakeBundleId];
         UITextView *logText = [[UITextView alloc] init];
         logText.textColor = UIColor.whiteColor;
         logText.backgroundColor = UIColor.blackColor;

@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
@@ -30,6 +30,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>将要获取位置</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>使用时获取位置</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>将要使用相册</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>该ID将用于向您推送个性化广告</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
