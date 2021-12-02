@@ -1,0 +1,3 @@
+[submodule "LFLSDKDemo/LFLAssetsTest"]
+	path = LFLSDKDemo/LFLAssetsTest
+	url = git@github.com:happytour/LFLAssetsTest.git
