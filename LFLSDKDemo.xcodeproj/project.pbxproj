@@ -19,7 +19,24 @@
 		E4645E0426C4CF3400E24C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4645E0326C4CF3400E24C00 /* Assets.xcassets */; };
 		E4645E0726C4CF3400E24C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4645E0526C4CF3400E24C00 /* LaunchScreen.storyboard */; };
 		E4645E0A26C4CF3400E24C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4645E0926C4CF3400E24C00 /* main.m */; };
+		E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E47CAE3A27585AF300D0C0A9 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */,
+				E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F7786BB909576DF3A028D25 /* libPods-LFLSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFLSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,8 +46,6 @@
 		E41D704A272A66F500574116 /* LFLSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LFLSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41D7060272AE12C00574116 /* LFLDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLDemoViewController.h; sourceTree = "<group>"; };
 		E41D7061272AE12C00574116 /* LFLDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLDemoViewController.m; sourceTree = "<group>"; };
-		E44A51252757715A00F3B4DF /* LFLAssetsB612.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssetsB612.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		E44A5128275771E200F3B4DF /* LFLAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4518A7A27294D5B0035D586 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E4518A7B27294D5B0035D586 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E4518A7D27294DA30035D586 /* NSBundle+changeBundleId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+changeBundleId.h"; sourceTree = "<group>"; };
@@ -47,6 +62,8 @@
 		E4645E0626C4CF3400E24C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4645E0826C4CF3400E24C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4645E0926C4CF3400E24C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssetsB612.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B09DAE26CBCB2200F69A69 /* LFLSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LFLSDKDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +136,8 @@
 		E4645E1026C4CF5600E24C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E44A5128275771E200F3B4DF /* LFLAssets.bundle */,
-				E44A51252757715A00F3B4DF /* LFLAssetsB612.bundle */,
+				E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */,
+				E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */,
 				E41D704A272A66F500574116 /* LFLSDK.framework */,
 				6F7786BB909576DF3A028D25 /* libPods-LFLSDKDemo.a */,
 			);
@@ -140,6 +157,7 @@
 				E4645DF226C4CF3100E24C00 /* Resources */,
 				7E3ADE7F19702F4BA5006388 /* [CP] Copy Pods Resources */,
 				B2BDD88DB9C902FE0CED5986 /* [CP] Embed Pods Frameworks */,
+				E47CAE3A27585AF300D0C0A9 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
