@@ -7,7 +7,7 @@
 
 #import "MainViewController.h"
 #import "ConfigViewController.h"
-#import <LFLSDk/LFLSDK.h>
+#import <LFLSDK/LFLSDK.h>
 #import "NSBundle+changeBundleId.h"
 #import "LFLDemoViewController.h"
 
