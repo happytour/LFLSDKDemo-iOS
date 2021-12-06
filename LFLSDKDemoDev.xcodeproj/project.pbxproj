@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F101700CFD352AC07A925CA /* libPods-LFLSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7786BB909576DF3A028D25 /* libPods-LFLSDKDemo.a */; };
 		E41B7C322730EC040017A39E /* LFLAssetsTest in Resources */ = {isa = PBXBuildFile; fileRef = E41B7C312730EC040017A39E /* LFLAssetsTest */; };
+		E41D704C272A66F500574116 /* LFLSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41D704A272A66F500574116 /* LFLSDK.framework */; };
 		E41D7062272AE12C00574116 /* LFLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41D7061272AE12C00574116 /* LFLDemoViewController.m */; };
 		E4518A7C27294D5B0035D586 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4518A7A27294D5B0035D586 /* MainViewController.m */; };
 		E4518A7F27294DA40035D586 /* NSBundle+changeBundleId.m in Sources */ = {isa = PBXBuildFile; fileRef = E4518A7E27294DA40035D586 /* NSBundle+changeBundleId.m */; };
@@ -18,13 +19,31 @@
 		E4645E0426C4CF3400E24C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4645E0326C4CF3400E24C00 /* Assets.xcassets */; };
 		E4645E0726C4CF3400E24C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4645E0526C4CF3400E24C00 /* LaunchScreen.storyboard */; };
 		E4645E0A26C4CF3400E24C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4645E0926C4CF3400E24C00 /* main.m */; };
+		E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E47CAE3A27585AF300D0C0A9 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 1;
+			files = (
+				E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */,
+				E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F7786BB909576DF3A028D25 /* libPods-LFLSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFLSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		701622D8347C05C0778D3242 /* Pods-LFLSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLSDKDemo.release.xcconfig"; path = "../LFLSDKDemo/Pods/Target Support Files/Pods-LFLSDKDemo/Pods-LFLSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B9CF5469F21F58EB546D5487 /* Pods-LFLSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLSDKDemo.debug.xcconfig"; path = "../LFLSDKDemo/Pods/Target Support Files/Pods-LFLSDKDemo/Pods-LFLSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		701622D8347C05C0778D3242 /* Pods-LFLSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-LFLSDKDemo/Pods-LFLSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B9CF5469F21F58EB546D5487 /* Pods-LFLSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFLSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-LFLSDKDemo/Pods-LFLSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E41B7C312730EC040017A39E /* LFLAssetsTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LFLAssetsTest; sourceTree = "<group>"; };
+		E41D704A272A66F500574116 /* LFLSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LFLSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41D7060272AE12C00574116 /* LFLDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLDemoViewController.h; sourceTree = "<group>"; };
 		E41D7061272AE12C00574116 /* LFLDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLDemoViewController.m; sourceTree = "<group>"; };
 		E4518A7A27294D5B0035D586 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -43,6 +62,8 @@
 		E4645E0626C4CF3400E24C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4645E0826C4CF3400E24C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4645E0926C4CF3400E24C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssetsB612.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B09DAE26CBCB2200F69A69 /* LFLSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LFLSDKDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41D704C272A66F500574116 /* LFLSDK.framework in Frameworks */,
 				4F101700CFD352AC07A925CA /* libPods-LFLSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +136,9 @@
 		E4645E1026C4CF5600E24C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */,
+				E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */,
+				E41D704A272A66F500574116 /* LFLSDK.framework */,
 				6F7786BB909576DF3A028D25 /* libPods-LFLSDKDemo.a */,
 			);
 			name = Frameworks;
@@ -132,6 +157,7 @@
 				E4645DF226C4CF3100E24C00 /* Resources */,
 				7E3ADE7F19702F4BA5006388 /* [CP] Copy Pods Resources */,
 				B2BDD88DB9C902FE0CED5986 /* [CP] Embed Pods Frameworks */,
+				E47CAE3A27585AF300D0C0A9 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -155,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E4645DEF26C4CF3100E24C00 /* Build configuration list for PBXProject "LFLSDKDemo" */;
+			buildConfigurationList = E4645DEF26C4CF3100E24C00 /* Build configuration list for PBXProject "LFLSDKDemoDev" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -449,7 +475,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4645DEF26C4CF3100E24C00 /* Build configuration list for PBXProject "LFLSDKDemo" */ = {
+		E4645DEF26C4CF3100E24C00 /* Build configuration list for PBXProject "LFLSDKDemoDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4645E0B26C4CF3400E24C00 /* Debug */,
