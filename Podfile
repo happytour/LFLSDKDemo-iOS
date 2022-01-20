@@ -30,6 +30,6 @@ target 'LFLSDKDemo' do
   pod 'LYAdSDKAdapterForKLN', '2.3.2'
 
   pod 'LFLSDK', '1.1.0'
-  pod 'LFLAssets***', '***'
+  #pod 'LFLAssets***', '***'
   project 'LFLSDKDemo'
 end
