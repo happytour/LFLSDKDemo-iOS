@@ -34,7 +34,7 @@ target 'LFLSDKDemo' do
   pod 'fork-JADYun' , '1.3.4'
   pod 'fork-KlevinAdSDK', '2.3.0.222'
 
-  pod 'LYAdSDK', '2.3.4'
+  pod 'LYAdSDK*', '2.3.4'
   pod 'LYAdSDKAdapterForCSJ', '2.3.4'
   pod 'LYAdSDKAdapterForGDT', '2.3.3'
   pod 'LYAdSDKAdapterForKS', '2.3.0'
@@ -44,8 +44,8 @@ target 'LFLSDKDemo' do
   pod 'LYAdSDKAdapterForJD', '2.3.0'
   pod 'LYAdSDKAdapterForKLN', '2.3.2'
 
-  pod 'LFLSDK', '1.0.8'
-  pod 'LFLAssets***', '***'
+  pod 'LFLSDK', '1.1.0'
+  #pod 'LFLAssets***', '***'
   project 'LFLSDKDemo'
 end
 ```
@@ -116,6 +116,8 @@ typedef NS_ENUM(NSInteger, LFLCustomTaskType) {
     LFLCustomTaskTypeTakePhoto = 5, // 拍照
     LFLCustomTaskTypeShare = 6, // 分享
     LFLCustomTaskTypeInvite = 7, // 邀请
+    LFLCustomTaskTypeCheckLogin = 8, // 登录检测
+    LFLCustomTaskTypeLogin = 9, // 登录
 };
 ```
 
@@ -124,17 +126,26 @@ typedef NS_ENUM(NSInteger, LFLCustomTaskType) {
 #### 通过showLFLFromRootViewController展示
 
 ```objectivec
-    [LFLSDKManager showLFLFromRootViewController:self customTaskListener:^(LFLView * lflView, LFLCustomTaskType customTask) {
-        if (customTask == LFLCustomTaskTypeShare) {
-            //调用媒体端分享逻辑
-        } else if (customTask == LFLCustomTaskTypeInvite) {
-            //调用媒体端邀请逻辑
-        } else if (customTask == LFLCustomTaskTypeTakePhoto) {
-            //调用媒体端拍照逻辑
+[LFLSDKManager showLFLFromRootViewController:self customTaskListener:^(LFLView * lflView, LFLCustomTaskType customTask) {
+    if (customTask == LFLCustomTaskTypeShare) {
+        //调用媒体端分享逻辑
+    } else if (customTask == LFLCustomTaskTypeInvite) {
+        //调用媒体端邀请逻辑
+    } else if (customTask == LFLCustomTaskTypeTakePhoto) {
+        //调用媒体端拍照逻辑
+    } else if (customTask == LFLCustomTaskTypeCheckLogin) {
+        //调用媒体端检测登录逻辑
+        if (...已登录...) {
+            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:YES];
+        } else {
+            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:NO];
         }
-    } dismissListener:^(LFLView * lflView) {
+    } else if (customTask == LFLCustomTaskTypeLogin) {
+        //调用媒体端登录逻辑
+    }
+} dismissListener:^(LFLView * lflView) {
         //处理LFL关闭逻辑
-    }];
+}];
 ```
 
 #### 通过LFLView展示
@@ -201,11 +212,19 @@ typedef NS_ENUM(NSInteger, LFLCustomTaskType) {
 - (void)lfl_lflViewDidCallCustomTask:(LFLView *) lflView customTask:(LFLCustomTaskType) customTask {
     if (customTask == LFLCustomTaskTypeShare) {
         //调用媒体端分享逻辑
-//        if (分享成功) {
-            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeShare success:YES];
-//        } else {
-//            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeShare success:NO];
-//        }
+    } else if (customTask == LFLCustomTaskTypeInvite) {
+        //调用媒体端邀请逻辑
+    } else if (customTask == LFLCustomTaskTypeTakePhoto) {
+        //调用媒体端拍照逻辑
+    } else if (customTask == LFLCustomTaskTypeCheckLogin) {
+        //调用媒体端检测登录逻辑
+        if (...已登录...) {
+            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:YES];
+        } else {
+            [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:NO];
+        }
+    } else if (customTask == LFLCustomTaskTypeLogin) {
+        //调用媒体端登录逻辑
     }
 }
 ```
