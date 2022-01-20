@@ -21,6 +21,7 @@
 		E4645E0A26C4CF3400E24C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4645E0926C4CF3400E24C00 /* main.m */; };
 		E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E46EB60427633EDA00A44E68 /* LFLAssetsDuolu.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = E46EB60127633E7400A44E68 /* LFLAssetsDuolu.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 1;
 			files = (
+				E46EB60427633EDA00A44E68 /* LFLAssetsDuolu.bundle in Embed PlugIns */,
 				E465C0B02758616D00A6B3FF /* LFLAssetsB612.bundle in Embed PlugIns */,
 				E465C0AF2758616D00A6B3FF /* LFLAssets.bundle in Embed PlugIns */,
 			);
@@ -64,6 +66,7 @@
 		E4645E0926C4CF3400E24C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssetsB612.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46EB60127633E7400A44E68 /* LFLAssetsDuolu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LFLAssetsDuolu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B09DAE26CBCB2200F69A69 /* LFLSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LFLSDKDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +139,7 @@
 		E4645E1026C4CF5600E24C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E46EB60127633E7400A44E68 /* LFLAssetsDuolu.bundle */,
 				E465C0AD2758616D00A6B3FF /* LFLAssets.bundle */,
 				E465C0AE2758616D00A6B3FF /* LFLAssetsB612.bundle */,
 				E41D704A272A66F500574116 /* LFLSDK.framework */,
