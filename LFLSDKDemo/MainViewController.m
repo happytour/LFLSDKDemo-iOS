@@ -155,6 +155,34 @@
             [alertController addAction:okAction];
             [alertController addAction:cancelAction];
             [lflView.viewController presentViewController:alertController animated:YES completion:nil];
+        } else if (customTask == LFLCustomTaskTypeCheckLogin) {
+            //调用媒体端检测登录逻辑
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"检测登录"
+                                                                                         message:@"模拟检测登录过程"
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"已登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:YES];
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"未登录" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeCheckLogin success:NO];
+            }];
+            [alertController addAction:okAction];
+            [alertController addAction:cancelAction];
+            [lflView.viewController presentViewController:alertController animated:YES completion:nil];
+        } else if (customTask == LFLCustomTaskTypeLogin) {
+            //调用媒体端登录逻辑
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"登录"
+                                                                                         message:@"模拟登录过程"
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"登录成功" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeLogin success:YES];
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"登录失败" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [LFLSDKManager triggerCustomTask:LFLCustomTaskTypeLogin success:NO];
+            }];
+            [alertController addAction:okAction];
+            [alertController addAction:cancelAction];
+            [lflView.viewController presentViewController:alertController animated:YES completion:nil];
         }
     } dismissListener:^(LFLView * lflView) {
         //处理LFL关闭逻辑
