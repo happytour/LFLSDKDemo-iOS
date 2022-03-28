@@ -32,10 +32,9 @@
     NSString *userId = [defaults objectForKey:@"userId"];
     NSString *appId = [defaults objectForKey:@"appId"];
     
-    [LFLSDKManager setAppId:appId];
-//    [LFLSDKManager initAppId:appId listener:^(BOOL success) {
-//
-//    }];
+    [LFLSDKManager initAppId:appId listener:^(BOOL success) {
+
+    }];
     [LFLSDKManager setUserId:userId];
     return YES;
 }
