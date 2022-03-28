@@ -14,7 +14,10 @@
 
 ```ruby
 # Uncomment the next line to define a global platform for your project
-source 'https://github.com/CocoaPods/Specs.git'
+# CocoaPods官方库
+#source 'https://github.com/CocoaPods/Specs.git'
+# 清华大学镜像库，如果上面库无法加载请使用下面镜像
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 # 添加LYSpecs私库
 source 'https://gitee.com/happytour/LYSpecs.git'
 platform :ios, '9.0'
@@ -23,29 +26,31 @@ workspace 'LFLSDKDemo'
 project 'LFLSDKDemo'
 
 target 'LFLSDKDemo' do
-  pod 'Ads-CN', '4.0.0.5'
-  pod 'GDTMobSDK', '4.13.10'
-  pod 'SigmobAd-iOS', '3.4.3'
-  pod 'BaiduMobAdSDK', '4.81'
-  pod 'WechatOpenSDK', '1.8.7.1'
+  pod 'Ads-CN', '4.1.0.2' # 穿山甲官方
+  pod 'GDTMobSDK', '4.13.26' # 广点通官方
+  pod 'SigmobAd-iOS', '3.5.3' # sigmob官方
+  pod 'BaiduMobAdSDK', '4.81' # 百度官方
+  pod 'WechatOpenSDK', '1.8.7.1' # 微信官方
+#  pod 'KSAdSDK', '3.3.22' # 快手AD官方（不能与KSAdSDKFull同时存在）
   # KSAdSDKFull、QySdk、JADYun、KlevinAdSDK，没有提交到官方库，需要引入LYSpecs私库拉取
-  pod 'fork-KSAdSDKFull', '3.3.23'
-  pod 'fork-QySdk', '1.3.2'
-  pod 'fork-JADYun' , '1.3.4'
-  pod 'fork-KlevinAdSDK', '2.3.0.222'
+  pod 'fork-KSAdSDKFull', '3.3.24.1' # 快手内容私库（不能与KSAdSDK同时存在）
+  pod 'fork-QySdk', '1.3.2' # 爱奇艺私库
+  pod 'fork-JADYun' , '1.3.4' # 京东私库
+  pod 'fork-KlevinAdSDK', '2.4.1.222' # 游可赢私库
 
-  pod 'LYAdSDK*', '2.3.4'
-  pod 'LYAdSDKAdapterForCSJ', '2.3.4'
-  pod 'LYAdSDKAdapterForGDT', '2.3.3'
-  pod 'LYAdSDKAdapterForKS', '2.3.0'
-  pod 'LYAdSDKAdapterForSIG', '2.3.0'
-  pod 'LYAdSDKAdapterForIQY', '2.3.0'
-  pod 'LYAdSDKAdapterForBD', '2.3.0'
-  pod 'LYAdSDKAdapterForJD', '2.3.0'
-  pod 'LYAdSDKAdapterForKLN', '2.3.2'
+  pod 'LYAdSDK', '2.4.4'
+  pod 'LYAdSDKAdapterForCSJ', '2.4.3' # 穿山甲支持
+  pod 'LYAdSDKAdapterForGDT', '2.3.3' # 广点通支持
+  pod 'LYAdSDKAdapterForKS', '2.4.1.1' # 快手AD支持
+  pod 'LYAdSDKAdapterForKSContent', '2.4.1.1' # 快手内容支持
+  pod 'LYAdSDKAdapterForSIG', '2.4.1' # sigmob支持
+  pod 'LYAdSDKAdapterForIQY', '2.3.0' # 爱奇艺支持
+  pod 'LYAdSDKAdapterForBD', '2.4.1' # 百度支持
+  pod 'LYAdSDKAdapterForJD', '2.3.0' # 京东支持
+  pod 'LYAdSDKAdapterForKLN', '2.4.1' # 游可赢支持
 
-  pod 'LFLSDK', '1.1.0'
-  #pod 'LFLAssets***', '***'
+  pod 'LFLSDK', '1.1.1'
+  pod 'LFLAssets***', '***' # ***联系相关人员获取
   project 'LFLSDKDemo'
 end
 ```
@@ -82,14 +87,11 @@ end
 ### 初始化
 
 ```objectivec
-if (...引入了资源包...) {
-    // 如果引入了资源包，不用等到初始化成功回调就可以展示乐福乐
-    [LFLSDKManager setAppId:@"你的媒体ID"];
-} else {
-    [LFLSDKManager initAppId:appId listener:^(BOOL success) {
+[LFLSDKManager initAppId:appId listener:^(BOOL success) {
+    if (success) {
         // 初始化成功后才可以展示乐福乐
-    }]
-}
+    }
+}];
 [LFLSDKManager setUserId:@"媒体用户唯一ID，可以是脱敏后的需保证唯一"];
 ```
 
@@ -104,7 +106,7 @@ NSLog(@"sdkVersion: %@", [LFLSDKManager sdkVersion]);
 
 ```objectivec
 // 例：100
-NSLog(@"sdkVersion: %@", [LFLSDKManager sdkAssetsVersion]);
+NSLog(@"sdkAssetsVersion: %@", [LFLSDKManager sdkAssetsVersion]);
 ```
 
 ### 自定义任务
