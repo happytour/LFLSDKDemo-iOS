@@ -23,7 +23,6 @@ target 'LFLSDKDemo' do
   pod 'fork-JADYun' , '1.3.4' # 京东私库
   pod 'fork-KlevinAdSDK', '2.4.1.222' # 游可赢私库
 
-  #pod 'LFLAssets***', '***'
   pod 'LYAdSDK', '2.4.4'
   pod 'LYAdSDKAdapterForCSJ', '2.4.3' # 穿山甲支持
   pod 'LYAdSDKAdapterForGDT', '2.3.3' # 广点通支持
@@ -36,5 +35,6 @@ target 'LFLSDKDemo' do
   pod 'LYAdSDKAdapterForKLN', '2.4.1' # 游可赢支持
 
   pod 'LFLSDK', '1.1.1'
+  pod 'LFLAssets***', '***'
   project 'LFLSDKDemo'
 end
