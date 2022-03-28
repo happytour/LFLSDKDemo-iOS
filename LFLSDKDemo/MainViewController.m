@@ -100,18 +100,44 @@
 }
 
 - (void)clickBtnLFL1 {
+    if (![self checkAppIdAndUserId]) {
+        return;
+    }
     LFLDemoViewController *lflVc = [[LFLDemoViewController alloc] init];
     [self.navigationController pushViewController:lflVc animated:YES];
 }
 
 - (void)clickBtnLFL2 {
+    if (![self checkAppIdAndUserId]) {
+        return;
+    }
     LFLDemoViewController *lflVc = [[LFLDemoViewController alloc] init];
     lflVc.modalPresentationStyle = UIModalPresentationFullScreen;
     [lflVc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self presentViewController:lflVc animated:YES completion:nil];
 }
 
+- (BOOL)checkAppIdAndUserId {
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    NSString *userId = [defaults objectForKey:@"userId"];
+    NSString *appId = [defaults objectForKey:@"appId"];
+    if (!userId || userId.length == 0 || !appId || appId.length == 0) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                                     message:@"appId或者userId不能为空"
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return NO;
+    }
+    return YES;
+}
+
 - (void)clickBtnLFL3 {
+    if (![self checkAppIdAndUserId]) {
+        return;
+    }
     [LFLSDKManager showLFLFromRootViewController:self customTaskListener:^(LFLView * lflView, LFLCustomTaskType customTask) {
         if (customTask == LFLCustomTaskTypeShare) {
             //调用媒体端分享逻辑
